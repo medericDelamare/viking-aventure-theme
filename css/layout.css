@@ -283,11 +283,11 @@
 }
 
 .wpsbc-legend-item-2 .wpsbc-legend-item-icon-color {
-    background-color: var(--viking-dark) !important;
+    background-color: var(--viking-red) !important;
 }
 
 .wpsbc-legend-item-3 .wpsbc-legend-item-icon-color {
-    background-color: var(--viking-ocre) !important;
+    background-color: var(--viking-orange) !important;
 }
 
 /* FOCUS SUR AUJOURD'HUI (Version Automatisée par attribut) */
@@ -324,11 +324,11 @@
 }
 
 .dot.orange {
-    background: var(--viking-ocre);
+    background: var(--viking-orange);
 }
 
-.dot.dark {
-    background: var(--viking-dark);
+.dot.red {
+    background: var(--viking-red);
 }
 
 .legend-item .label {

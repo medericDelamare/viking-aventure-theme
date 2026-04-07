@@ -188,7 +188,7 @@
                                 <span class="label">13h30 - 18h00</span>
                             </div>
                             <div class="legend-item">
-                                <span class="dot grey"></span>
+                                <span class="dot red"></span>
                                 <span class="label">Fermé</span>
                             </div>
                         </div>
