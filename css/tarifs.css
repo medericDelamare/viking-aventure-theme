@@ -1,0 +1,227 @@
+/* On s'assure que le fond de la page est légèrement gris pour faire ressortir les cartes blanches */
+.tarifs-page {
+    background-color: #f8f9fa;
+    padding-top: 130px;
+    /* Espace pour le menu fixe */
+    padding-bottom: 80px;
+}
+
+.pricing-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Carte mise en avant (Noire et Rouge) */
+.pricing-card.featured {
+    background: var(--viking-dark);
+    color: white;
+    border-color: var(--viking-red);
+    box-shadow: 0 15px 40px rgba(191, 34, 45, 0.2);
+}
+
+.viking-badge {
+    background: #eee;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.viking-badge.highlight {
+    background: var(--viking-red);
+    color: white;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 25px 0;
+}
+
+.price span {
+    font-size: 1.5rem;
+    vertical-align: top;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.features li {
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+}
+
+.features i {
+    color: var(--viking-green);
+    margin-right: 10px;
+    width: 20px;
+}
+
+/* Boutons */
+.btn-viking {
+    background: var(--viking-red);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    display: block;
+}
+
+.btn-viking-outline {
+    border: 2px solid var(--viking-dark);
+    color: var(--viking-dark);
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    display: block;
+}
+
+.limit-info {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--viking-red);
+    font-size: 0.8rem;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.card-header-viking {
+    min-height: 100px;
+    /* Ajuste cette valeur si nécessaire */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.card-header-viking h3 {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 1.5rem;
+    /* On réduit légèrement pour éviter les retours à la ligne trop tôt */
+}
+
+
+
+/* Style pour l'alerte sombre dans la carte Paintball */
+.viking-alert-dark {
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    border-left: 4px solid var(--viking-red);
+    text-align: left;
+    margin-top: 20px;
+}
+
+.pricing-card.featured .viking-alert-dark {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* On ré-applique le min-height pour les titres du Paintball aussi */
+.paintball-section .card-header-viking {
+    min-height: 80px;
+}
+
+.viking-label.red {
+    background: rgba(191, 34, 45, 0.1);
+    color: var(--viking-red);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Couleur Ocre Viking (pour le côté bois/cabane) */
+:root {
+    --viking-ocre: #a67c52;
+}
+
+.viking-label.ocre {
+    background: rgba(166, 124, 82, 0.1);
+    color: var(--viking-ocre);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Style spécifique pour la carte cabane horizontale */
+.cabin-card {
+    border: none;
+    overflow: hidden;
+    padding: 0 !important;
+    /* On gère le padding avec Bootstrap */
+}
+
+.cabin-card .price {
+    margin: 0;
+    line-height: 1;
+}
+
+/* Sur mobile, on remet le titre au centre */
+@media (max-width: 767px) {
+    .cabin-card .text-start {
+        text-align: center !important;
+    }
+
+    .cabin-card .features {
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+/* Conteneur parent */
+.position-relative {
+    position: relative;
+}
+
+/* Positionnement de la mascotte */
+.mascot-overlap {
+    position: absolute;
+    width: 180px; /* Taille à ajuster selon tes goûts */
+    top: -170px;   /* Elle dépasse par le haut */
+    right: -30px; /* Elle dépasse sur le côté droit */
+    z-index: 1;   /* Elle passe par-dessus le fond mais on peut la mettre à -1 pour passer derrière */
+    pointer-events: none; /* Pour que l'utilisateur puisse toujours cliquer sur la carte en dessous */
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.2));
+}
+
+/* On s'assure que la carte est bien au-dessus si on veut que la mascotte soit "derrière" */
+.pricing-card.featured {
+    position: relative;
+    z-index: 2;
+}
+
+/* Sur mobile, on l'efface ou on la réduit pour ne pas gêner la lecture */
+@media (max-width: 992px) {
+    .mascot-overlap {
+        display: none;
+    }
+}

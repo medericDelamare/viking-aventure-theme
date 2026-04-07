@@ -1,0 +1,54 @@
+/* Style spécifique à la page Accrobranche */
+.accro-hero {
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Petit effet parallaxe */
+}
+
+.viking-label.highlight {
+    background: var(--viking-red);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.security-bar i {
+    transition: transform 0.3s ease;
+}
+
+.security-bar .col-md-4:hover i {
+    transform: translateY(-5px);
+}
+
+.parcours-details h3 {
+    font-size: 2rem;
+    color: var(--viking-dark);
+}
+
+.parcours-details ul li {
+    padding: 8px 0;
+    font-weight: 600;
+}
+
+.cta-accro {
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+}
+
+.btn-white-outline {
+    border: 2px solid white;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.btn-white-outline:hover {
+    background: white;
+    color: var(--viking-dark);
+}

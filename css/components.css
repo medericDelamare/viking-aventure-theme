@@ -1,0 +1,190 @@
+/*
+ * Viking Aventure - Global Components
+ * Fichier dédié aux classes utilitaires globales pour éviter le CSS inline (style="...").
+ * Centralise les ombres, dégradés, et composants de mise en page récurrents.
+ */
+
+/* Spacing sous le header fixe */
+.pt-header {
+    margin-top: 80px;
+    padding-top: 20px;
+}
+
+/* Feature Cards (Cartes blanches avec ombre) */
+.viking-card-feature {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.viking-card-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08); /* Effet d'élévation Premium */
+}
+
+/* Cartes sombres Premium */
+.viking-card-dark {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.viking-card-dark:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* Cadres Photo / Polaroids Rotatifs */
+.viking-polaroid {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transform: rotate(3deg);
+    border: 5px solid white;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.viking-polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+/* Image forcée en mode cover avec hauteur fixée */
+.viking-img-cover {
+    width: 100%;
+    object-fit: cover;
+    height: 380px;
+}
+
+/* Badges étendus */
+.viking-badge-lg {
+    font-size: 1rem;
+    padding: 8px 15px;
+}
+
+.viking-badge-danger {
+    background: #e74c3c;
+    border: 2px solid white;
+    color: white;
+    font-size: 1rem;
+    padding: 8px 15px;
+    display: inline-block;
+}
+
+/* Bouton de réservation surdimensionné */
+.btn-reservation-lg {
+    font-size: 20px;
+    box-shadow: 0 10px 25px rgba(191,34,45,0.3) !important;
+    transform: scale(1.05);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-reservation-lg:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(191,34,45,0.4) !important;
+}
+
+/* Cartes Promotionnelles et Spéciales */
+.viking-card-promo {
+    background: linear-gradient(135deg, #fdf5e6 0%, #ffffff 100%);
+    border: 3px solid var(--viking-red);
+    transform: scale(1.02);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Effets d'icônes */
+.viking-icon-shadow {
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+}
+
+.viking-icon-box {
+    width: 80px;
+    height: 80px;
+    background: rgba(191,34,45,0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+/* Boîtes d'alerte Premium */
+.viking-alert-warning {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255,193,7,0.15);
+    border: 0;
+}
+
+/* Cartes simples pour contenus secondaires */
+.viking-card-light {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+/* Boîte Call-To-Action (Bordure en pointillés) */
+.viking-cta-box {
+    background: rgba(191,34,45,0.05);
+    border-radius: 15px;
+    border: 2px dashed rgba(191,34,45,0.2);
+}
+
+/* Utilitaire de conteneur restreint (ex: FAQ) */
+.viking-container-narrow {
+    max-width: 800px;
+}
+
+/* Couleurs de marque spécifiques non-couvertes par Bootstrap */
+.text-viking-green {
+    color: var(--viking-green) !important;
+}
+
+/* Petites boîtes à icônes ombragées (Contact) */
+.viking-icon-box-sm {
+    width: 55px;
+    height: 55px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Fonds teintés doux avec bords arrondis (Contact) */
+.viking-tint-danger { background: rgba(191,34,45,0.05); border-radius: 12px; }
+.viking-tint-success { background: rgba(22,160,133,0.05); border-radius: 12px; }
+.viking-tint-primary { background: rgba(41,128,185,0.05); border-radius: 12px; }
+
+/* Carte Premium très lumineuse (Formulaire de contact) */
+.viking-card-premium-light {
+    background: linear-gradient(135deg, #ffffff 0%, #fdfcfa 100%);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+/* Alerte Promotionnelle (Snack/Terrasse) */
+.viking-alert-promo {
+    border-radius: 15px;
+    background: linear-gradient(135deg, #fdf5e6 0%, #fcecd9 100%);
+    box-shadow: 0 8px 25px rgba(191, 34, 45, 0.1);
+}
+
+/* Logos Partenaires Restaurateurs */
+.viking-partner-logo {
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 8px; /* Optionnel : pour les images carrées */
+}
+
+/* Bordures supérieures colorées (Partenaires) */
+.border-partner-mercier { border-top: 4px solid #f39c12; }
+.border-partner-ragnar { border-top: 4px solid #c0392b; }
+.border-partner-louvet { border-top: 4px solid #27ae60; }
+.border-partner-poule { border-top: 4px solid #e67e22; }

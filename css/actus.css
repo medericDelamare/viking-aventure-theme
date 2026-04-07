@@ -1,0 +1,74 @@
+/* Carousel Horizontal Natif CSS (Performant, sans JS) */
+.actus-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.actus-carousel-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.actus-carousel {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 10px 30px 10px; /* Espace pour les ombres portées et la scrollbar */
+}
+
+/* Customisation de la Scrollbar */
+.actus-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+.actus-carousel::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+.actus-carousel::-webkit-scrollbar-thumb {
+    background: var(--viking-red, #bf222d);
+    border-radius: 10px;
+}
+.actus-carousel::-webkit-scrollbar-thumb:hover {
+    background: #a01a24;
+}
+
+.actu-card {
+    min-width: 320px;
+    max-width: 350px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.actu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+}
+
+.actu-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.actu-date {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--viking-red, #bf222d);
+    color: white;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 10px rgba(191,34,45,0.4);
+}

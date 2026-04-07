@@ -1,0 +1,77 @@
+/* --- STYLISATION WPFORMS STYLE VIKING --- */
+
+/* Conteneur global */
+.wpforms-container {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ajoute l'icône AVANT le texte du bouton WPForms */
+.wpforms-form button[type="submit"]::before {
+    content: "\f1d8";
+    /* Code Unicode de l'icône paper-plane */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+/* Les labels (Prénom, Email, etc.) */
+.wpforms-form .wpforms-field-label {
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    color: #1a1a1a !important;
+    margin-bottom: 8px !important;
+    display: block;
+}
+
+/* Les champs de saisie (input, textarea, select) */
+.wpforms-form input[type="text"],
+.wpforms-form input[type="email"],
+.wpforms-form input[type="tel"],
+.wpforms-form select,
+.wpforms-form textarea {
+    background-color: #f4f6f8 !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 15px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease !important;
+    color: #333 !important;
+}
+
+/* Effet au clic sur un champ */
+.wpforms-form input:focus,
+.wpforms-form textarea:focus {
+    background-color: #ffffff !important;
+    box-shadow: 0 5px 15px rgba(191, 34, 45, 0.1) !important;
+    outline: none !important;
+}
+
+/* Le bouton d'envoi */
+.wpforms-form button[type="submit"] {
+    background: #bf222d !important;
+    /* Ton rouge Viking */
+    color: #fff !important;
+    border: none !important;
+    padding: 15px 40px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+    cursor: pointer !important;
+    box-shadow: 0 8px 25px rgba(191, 34, 45, 0.3) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.wpforms-form button[type="submit"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 30px rgba(191, 34, 45, 0.4) !important;
+    background: #a31d26 !important;
+}
+
+/* Ajustement pour les messages d'erreur */
+.wpforms-error {
+    color: #bf222d !important;
+    font-size: 0.8rem !important;
+    margin-top: 5px !important;
+}
