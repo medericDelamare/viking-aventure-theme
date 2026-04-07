@@ -53,7 +53,7 @@
 
                         if ($actus_query->have_posts()) :
                             while ($actus_query->have_posts()) : $actus_query->the_post(); 
-                                $bg_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url(null, 'large') : 'https://images.unsplash.com/photo-1544321590-79883584852c?q=80&w=600';
+                                $bg_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url(null, 'large') : get_template_directory_uri() . '/assets/img/acccrobranche.JPG';
                                 ?>
                                 <div class="actu-card viking-card-light">
                                     <div class="actu-img" style="background-image: url('<?php echo esc_url($bg_image); ?>');">
@@ -98,7 +98,7 @@
                 <div class="activities-slider">
                     <!-- Carte 1: Accrobranche -->
                     <a href="/accrobranche" class="activity-card">
-                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544321590-79883584852c?q=80&w=600');"></div>
+                        <div class="card-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/acccrobranche.JPG');"></div>
                         <div class="card-body">
                             <h3>Accrobranche</h3>
                             <p>Explorez nos 12 parcours en hauteur pour tous les niveaux. Enfilez votre baudrier et partez à l'aventure !</p>
@@ -108,7 +108,7 @@
 
                     <!-- Carte 2: Paintball -->
                     <a href="/paintball" class="activity-card">
-                        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1518608298458-7505ed2c2ce0?q=80&w=600');"></div>
+                        <div class="card-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/paintball.JPG');"></div>
                         <div class="card-body">
                             <h3>Paintball</h3>
                             <p>Venez défier vos amis sur nos terrains aménagés. Stratégie, cohésion et adrénaline garanties !</p>

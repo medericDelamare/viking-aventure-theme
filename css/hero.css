@@ -7,7 +7,7 @@
     color: white;
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
-    url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1920&auto=format&fit=crop');
+    url('../assets/img/home.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -31,7 +31,7 @@
 .card-image-bg {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1920&auto=format&fit=crop');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('../assets/img/home.jpeg');
     background-size: cover; background-position: center;
     transition: transform 0.6s ease;
 }
