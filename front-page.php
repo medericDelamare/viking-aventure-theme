@@ -180,15 +180,15 @@
 
                         <div class="viking-legend">
                             <div class="legend-item">
-                                <span class="dot green"></span>
-                                <span class="label">10h00 - 19h00</span>
+                                <span class="dot full"></span>
+                                <span class="label">10h - 18h</span>
                             </div>
                             <div class="legend-item">
-                                <span class="dot orange"></span>
-                                <span class="label">13h30 - 18h00</span>
+                                <span class="dot half"></span>
+                                <span class="label">13h - 18h</span>
                             </div>
                             <div class="legend-item">
-                                <span class="dot red"></span>
+                                <span class="dot closed"></span>
                                 <span class="label">Fermé</span>
                             </div>
                         </div>

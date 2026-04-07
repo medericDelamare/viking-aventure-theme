@@ -279,21 +279,21 @@
 }
 
 .wpsbc-legend-item-1 .wpsbc-legend-item-icon-color {
-    background-color: var(--viking-green) !important;
+    background-color: #c0202c !important;
 }
 
 .wpsbc-legend-item-2 .wpsbc-legend-item-icon-color {
-    background-color: var(--viking-red) !important;
+    background-color: #020202 !important;
 }
 
 .wpsbc-legend-item-3 .wpsbc-legend-item-icon-color {
-    background-color: var(--viking-orange) !important;
+    background-color: #efccc8 !important;
 }
 
 /* FOCUS SUR AUJOURD'HUI (Version Automatisée par attribut) */
 /* Remplace [data-day="14"] par le jour actuel pour tester */
 .wpsbc-date[data-day="14"][data-month="2"][data-year="2026"] {
-    outline: 3px solid var(--viking-red) !important;
+    outline: 3px solid #c0202c !important;
     outline-offset: -3px;
 }
 
@@ -319,16 +319,16 @@
     border-radius: 50%;
 }
 
-.dot.green {
-    background: var(--viking-green);
+.dot.full {
+    background: #c0202c;
 }
 
-.dot.orange {
-    background: var(--viking-orange);
+.dot.half {
+    background: #efccc8;
 }
 
-.dot.red {
-    background: var(--viking-red);
+.dot.closed {
+    background: #020202;
 }
 
 .legend-item .label {
