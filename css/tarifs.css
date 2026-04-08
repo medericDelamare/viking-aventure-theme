@@ -6,6 +6,13 @@
     padding-bottom: 80px;
 }
 
+@media (max-width: 768px) {
+    .tarifs-page {
+        padding-top: 100px !important; /* Dépasse le header de 70px pour laisser 30px de marge visible */
+        padding-bottom: 40px;
+    }
+}
+
 .pricing-card {
     background: white;
     padding: 30px 20px;

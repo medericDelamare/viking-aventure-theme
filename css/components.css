@@ -188,3 +188,31 @@
 .border-partner-ragnar { border-top: 4px solid #c0392b; }
 .border-partner-louvet { border-top: 4px solid #27ae60; }
 .border-partner-poule { border-top: 4px solid #e67e22; }
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .pt-header {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    .section-padding {
+        padding: 60px 0 !important;
+    }
+
+    main > .container.py-5,
+    main > section.py-5,
+    main > .py-5 {
+        padding-top: 0 !important; 
+    }
+
+    main .section-header {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    main [style*="margin-top"] {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
