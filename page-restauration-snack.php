@@ -105,7 +105,8 @@ get_header();
                         <li class="d-flex justify-content-between mb-4"><span>Eau plate (150cl)</span> <strong>2.00€</strong></li>
                         
                         <li class="d-flex justify-content-between mb-2 text-warning"><span>Bière Ragnar en pression (33cl)</span> <strong>4.70€</strong></li>
-                        <li class="d-flex justify-content-between mb-4 text-warning"><span>Bière Ragnar en pression (50cl)</span> <strong>7.00€</strong></li>
+                        <li class="d-flex justify-content-between mb-2 text-warning"><span>Bière Ragnar en pression (50cl)</span> <strong>7.00€</strong></li>
+                        <li class="d-flex justify-content-between mb-4 text-warning"><span>Bière Desperados (33cl)</span> <strong>4.50€</strong></li>
                         
                         <li class="d-flex justify-content-between mb-2"><span>Café</span> <strong>1.50€</strong></li>
                         <li class="d-flex justify-content-between mb-2"><span>Thé</span> <strong>1.50€</strong></li>

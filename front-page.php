@@ -8,7 +8,7 @@
                     <div class="card-overlay">
                         <span class="badge-white">Nouveauté 2026</span>
                         <h1>L'aventure en famille, <br>grandeur nature.</h1>
-                        <p>Découvrez nos 12 parcours au cœur de la forêt normande.</p>
+                        <p>Découvrez nos 12 parcours et plus de 130 ateliers au cœur de la forêt normande.</p>
                         <div class="hero-btns">
                             <a href="<?php echo home_url('/contact'); ?>" class="btn-reservation">NOUS CONTACTER</a>
                             <a href="#univers" class="btn-white-outline">VOIR LES PARCOURS</a>
@@ -81,9 +81,9 @@
         <section class="features-bar">
             <div class="container">
                 <div class="feature-item"><strong>12</strong> Parcours</div>
-                <div class="feature-item"><strong>150</strong> Ateliers</div>
+                <div class="feature-item"><strong>130</strong> Ateliers</div>
                 <div class="feature-item"><strong>100%</strong> Sécurisé</div>
-                <div class="feature-item"><strong>3h</strong> De plaisir</div>
+                <div class="feature-item"><strong>Sensations</strong> Fortes</div>
             </div>
         </section>
 
@@ -116,7 +116,18 @@
                         </div>
                     </a>
 
-
+                    <!-- Carte 3: Pétanque & Mini-golf -->
+                    <a href="javascript:void(0)" class="activity-card card-soon text-decoration-none" style="cursor: default;">
+                        <div class="card-img position-relative bg-dark d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-golf-ball-tee text-white opacity-25" style="font-size: 3rem;"></i>
+                            <div class="position-absolute top-0 end-0 m-3 bg-danger text-white px-2 py-1 rounded shadow-sm" style="font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">À venir</div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Pétanque & Mini-golf</h3>
+                            <p>De nouvelles activités débarquent bientôt pour prolonger votre journée au parc !</p>
+                            <span class="btn-link text-muted text-decoration-none">Prochainement <i class="fa-solid fa-hourglass-half"></i></span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>

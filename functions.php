@@ -179,3 +179,50 @@ function viking_seo_meta_tags() {
     echo "<!-- /SEO -->\n";
 }
 add_action('wp_head', 'viking_seo_meta_tags', 1);
+
+// --- Custom Post Type: Planning ---
+function viking_register_planning_cpt() {
+    $labels = array(
+        'name'               => 'Plannings',
+        'singular_name'      => 'Planning',
+        'menu_name'          => 'Plannings',
+        'add_new'            => 'Ajouter',
+        'add_new_item'       => 'Ajouter un planning',
+    );
+    $args = array(
+        'labels'             => $labels,
+        'public'             => false,
+        'show_ui'            => true,
+        'menu_icon'          => 'dashicons-calendar-alt',
+        'supports'           => array('title', 'thumbnail'),
+    );
+    register_post_type('planning', $args);
+}
+add_action('init', 'viking_register_planning_cpt');
+
+function viking_add_planning_meta_box() {
+    add_meta_box('planning_month_meta', 'Période du planning (Année - Mois)', 'viking_planning_meta_callback', 'planning', 'normal', 'high');
+}
+add_action('add_meta_boxes', 'viking_add_planning_meta_box');
+
+function viking_planning_meta_callback($post) {
+    wp_nonce_field('viking_save_planning_data', 'viking_planning_meta_nonce');
+    $value = get_post_meta($post->ID, '_planning_month', true);
+    if (!$value) {
+        $value = date('Y-m');
+    }
+    echo '<label for="planning_month_field">Sélectionnez le mois concerné par l\'image : </label><br><br>';
+    echo '<input type="month" id="planning_month_field" name="planning_month_field" value="' . esc_attr($value) . '" style="padding:5px;">';
+    echo '<p class="description" style="margin-top:10px;">Dès que ce mois sera terminé, l\'image ne s\'affichera plus sur le site.</p>';
+}
+
+function viking_save_planning_meta($post_id) {
+    if (!isset($_POST['viking_planning_meta_nonce'])) return;
+    if (!wp_verify_nonce($_POST['viking_planning_meta_nonce'], 'viking_save_planning_data')) return;
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    
+    if (isset($_POST['planning_month_field'])) {
+        update_post_meta($post_id, '_planning_month', sanitize_text_field($_POST['planning_month_field']));
+    }
+}
+add_action('save_post', 'viking_save_planning_meta');

@@ -71,9 +71,7 @@ get_header();
             </div>
             <div class="col-md-9 border-start ps-md-4 mt-3 mt-md-0">
                 <p class="fs-5 mb-3">Des dizaines d'ateliers perchés dans les cimes ! Propulsez la star du jour sur les ponts de singe instables, envoyez-la sauter dans le vide absolu, et réceptionnez-la à l'arrivée de nos tyroliennes géantes.</p>
-                <div class="viking-alert-dark d-inline-block px-3 py-2 rounded">
-                    <strong>Parcours Extrêmes :</strong> Idéal pour tester le vertige de votre ami(e). Ligne de vie continue pour la sécurité !
-                </div>
+
             </div>
         </div>
 
@@ -86,7 +84,7 @@ get_header();
             <div class="col-md-9 border-start ps-md-4 mt-3 mt-md-0">
                 <p class="fs-5 mb-3">L'activité incontournable des enterrements de vie de célibataire. C'est le moment rêvé pour régler tous vos comptes de manière tout à fait légale avec le marié, idéalement vêtu d'un énorme costume en forme de cible.</p>
                 <div class="viking-alert-dark d-inline-block px-3 py-2 rounded">
-                    <i class="fa-solid fa-star text-warning me-2"></i><strong>L'Offre Combo "Grand Jarl" :</strong> Optez pour Accrobranche le matin + Paintball l'après-midi au tarif combo !
+                    <i class="fa-solid fa-star text-warning me-2"></i><strong>L'Offre Combo "Forfait viking" :</strong> Optez pour Accrobranche le matin + Paintball l'après-midi au tarif combo ! <em>(Sur réservation uniquement)</em>
                 </div>
             </div>
         </div>
@@ -136,9 +134,7 @@ get_header();
         <!-- Appel à l'action Final -->
         <div class="row pb-4">
             <div class="col-12 text-center">
-                <a href="<?php echo home_url('/contact'); ?>" class="btn btn-reservation btn-reservation-lg px-5 py-3">
-                    <i class="fa-solid fa-calendar-alt me-2"></i> Bloquer notre date <i class="fa-solid fa-arrow-right ms-2"></i>
-                </a>
+
                 <p class="mt-4 text-muted"><strong>Conseil d'ami :</strong> Les week-ends de printemps / été sont très demandés pour les EVG.<br>Réservez bien à l'avance pour sécuriser le Paintball et les Baudriers !</p>
             </div>
         </div>

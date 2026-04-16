@@ -23,7 +23,7 @@ get_header();
                 <div class="pricing-card h-100">
                     <div class="card-header-viking">
                         <span class="viking-badge">90cm à 110cm</span>
-                        <h3>Pack Pitchoun</h3>
+                        <h3>Village Viking</h3>
                     </div>
                     <div class="price">8<span>€</span></div>
                     <p class="limit-info">Accès illimité</p>
@@ -39,9 +39,9 @@ get_header();
                 <div class="pricing-card h-100">
                     <div class="card-header-viking">
                         <span class="viking-badge">Taille > 110cm</span>
-                        <h3>Pack Découverte</h3>
+                        <h3>Formule facile</h3>
                     </div>
-                    <div class="price">13<span>€</span></div>
+                    <div class="price">15<span>€</span></div>
                     <p class="limit-info">Accès illimité</p>
                     <ul class="features">
                         <li><i class="fa-solid fa-plus"></i> Parcours Enfants</li>
@@ -58,9 +58,9 @@ get_header();
                 <div class="pricing-card featured h-100">
                     <div class="card-header-viking">
                         <span class="viking-badge highlight">Taille > 125cm</span>
-                        <h3>Pack Exploration</h3>
+                        <h3>Formule moyenne</h3>
                     </div>
-                    <div class="price">19<span>€</span></div>
+                    <div class="price">20<span>€</span></div>
                     <p class="limit-info">Accès illimité</p>
                     <ul class="features">
                         <li><i class="fa-solid fa-plus"></i> Packs précédents</li>
@@ -74,7 +74,7 @@ get_header();
                 <div class="pricing-card h-100">
                     <div class="card-header-viking">
                         <span class="viking-badge">Taille > 140cm</span>
-                        <h3>Pack Total</h3>
+                        <h3>Formule difficile</h3>
                     </div>
                     <div class="price">25<span>€</span></div>
                     <p class="limit-info">Accès illimité</p>
@@ -87,6 +87,25 @@ get_header();
             </div>
 
         </section>
+
+        <div class="row mt-5 justify-content-center">
+            <div class="col-lg-10">
+                <div class="viking-card-dark p-4 p-md-5 d-flex align-items-center justify-content-between flex-wrap gap-4 rounded-4" style="background: linear-gradient(135deg, #1e3c28 0%, #0a1f0f 100%); border: 2px solid #2ecc71;">
+                    <div class="d-flex align-items-center gap-4">
+                        <i class="fa-solid fa-infinity fa-4x text-success"></i>
+                        <div>
+                            <span class="badge bg-success mb-2">Passionnés d'aventure</span>
+                            <h3 class="fw-bold mb-2">Pass Illimité Annuel</h3>
+                            <p class="mb-0 text-white-50 fs-5">Accrobranche à volonté toute la saison.<br>Même pas besoin de réserver, venez quand vous voulez !</p>
+                        </div>
+                    </div>
+                    <div class="text-md-end text-center w-100 w-md-auto mt-3 mt-md-0">
+                        <div class="display-4 fw-bold text-white">75<span class="fs-3">€</span></div>
+                        <small class="text-white-50">Carte nominative / Par personne</small>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="row mt-5">
             <div class="col-12 text-center">
@@ -107,8 +126,8 @@ get_header();
                 <div class="row align-items-center">
                     <div class="col-lg-7 p-4 p-md-5">
                         <span class="viking-label highlight mb-2">Offre de Saison</span>
-                        <h2 class="display-5 fw-bold text-white">Le Pack "Grand Jarl"</h2>
-                        <p class="lead text-white-50">L'expérience Viking ultime pour les guerriers qui n'ont peur de rien.</p>
+                        <h2 class="display-5 fw-bold text-white">Le "Forfait viking"</h2>
+                        <p class="lead text-white-50">L'expérience Viking ultime pour les guerriers qui n'ont peur de rien.<br><br><span class="text-warning"><i class="fa-solid fa-calendar-check me-2"></i>Uniquement sur réservation</span></p>
 
                         <ul class="features-horizontal">
                             <li><i class="fa-solid fa-check-circle"></i> Accrobranche Illimité (Tous parcours)</li>
@@ -166,7 +185,7 @@ get_header();
                 </ul>
                 <div class="viking-alert-dark mt-auto">
                     <i class="fa-solid fa-tag me-2"></i>
-                    <strong>Offre Cartouche :</strong> 69€ le carton de 2000 billes (Particuliers).
+                    <strong>Offre Cartouche :</strong> 69€ le carton de 2000 billes.
                 </div>
             </div>
         </div>

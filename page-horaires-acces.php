@@ -80,6 +80,57 @@ get_header();
 
         <hr class="my-5 opacity-25"> 
 
+        <!-- Carrousel des Plannings -->
+        <section class="plannings-section mb-5">
+            <div class="text-center mb-5">
+                <span class="viking-label red">Nos Calendriers</span>
+                <h2 class="display-5 fw-bold">Plannings Mensuels</h2>
+                <p class="lead">Faites glisser pour découvrir nos horaires mois par mois.</p>
+            </div>
+            
+            <div class="planning-carousel-wrapper">
+                <div class="planning-carousel" id="planningCarousel">
+                    <?php
+                    $current_month = date('Y-m');
+                    $planning_args = array(
+                        'post_type' => 'planning',
+                        'posts_per_page' => -1,
+                        'meta_key' => '_planning_month',
+                        'orderby' => 'meta_value',
+                        'order' => 'ASC',
+                        'meta_query' => array(
+                            array(
+                                'key' => '_planning_month',
+                                'value' => $current_month,
+                                'compare' => '>=',
+                                'type' => 'CHAR'
+                            )
+                        )
+                    );
+                    $planning_query = new WP_Query($planning_args);
+
+                    if ($planning_query->have_posts()) :
+                        while ($planning_query->have_posts()) : $planning_query->the_post(); 
+                            $img_url = get_the_post_thumbnail_url(null, 'large');
+                            if (!$img_url) continue;
+                            ?>
+                            <div class="planning-slide">
+                                <img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" class="planning-img">
+                                <div class="planning-title"><?php the_title(); ?></div>
+                            </div>
+                        <?php endwhile;
+                        wp_reset_postdata();
+                    else : ?>
+                        <div class="w-100 text-center text-muted">
+                            <p>Les plannings à venir seront affichés ici très bientôt.</p>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5 opacity-25"> 
+
         <!-- Section Conseils pour votre visite -->
         <section class="tips-section mb-5">
             <div class="text-center mb-5">
@@ -129,5 +180,65 @@ get_header();
 </main>
 
 <?php 
+// Script pour le carousel interactif
+add_action('wp_footer', function() {
+    ?>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const carousel = document.querySelector('.planning-carousel');
+            if(!carousel) return;
+            const slides = document.querySelectorAll('.planning-slide');
+            
+            if(slides.length === 0) return;
+
+            function updateActiveSlide() {
+                let carouselRect = carousel.getBoundingClientRect();
+                let centerPoint = carouselRect.left + carouselRect.width / 2;
+                let closestSlide = null;
+                let minDiff = Infinity;
+
+                slides.forEach(slide => {
+                    let rect = slide.getBoundingClientRect();
+                    let slideCenter = rect.left + rect.width / 2;
+                    let diff = Math.abs(centerPoint - slideCenter);
+                    if (diff < minDiff) {
+                        minDiff = diff;
+                        closestSlide = slide;
+                    }
+                });
+
+                if (closestSlide && !closestSlide.classList.contains('active')) {
+                    slides.forEach(s => s.classList.remove('active'));
+                    closestSlide.classList.add('active');
+                }
+            }
+
+            carousel.addEventListener('scroll', updateActiveSlide);
+            window.addEventListener('resize', updateActiveSlide);
+            
+            // Permettre le clic pour scroller vers un slide (très utile sur PC sans trackpad)
+            slides.forEach(slide => {
+                slide.addEventListener('click', function() {
+                    let rect = slide.getBoundingClientRect();
+                    let carouselRect = carousel.getBoundingClientRect();
+                    let slideCenter = rect.left + rect.width / 2;
+                    let carouselCenter = carouselRect.left + carouselRect.width / 2;
+                    
+                    carousel.scrollBy({
+                        left: slideCenter - carouselCenter,
+                        behavior: 'smooth'
+                    });
+                });
+                // Curseur pointer pour indiquer que c'est cliquable
+                slide.style.cursor = 'pointer';
+            });
+            
+            // Petite pause pour laisser le CSS et les images se charger avant de calculer le centre
+            setTimeout(updateActiveSlide, 100);
+        });
+    </script>
+    <?php
+}, 100);
+
 get_footer(); 
 ?>
