@@ -19,13 +19,13 @@ get_header(); ?>
             <div class="col-lg-7">
                 <h2 class="fw-bold mb-4">100% Adrénaline, 0% Risque</h2>
                 <p class="fs-5 text-dark mb-4 lh-lg">
-                    Que vous soyez un jeune aventurier de 3 ans ou un grimpeur chevronné prêt à défier le vide, l'intégralité de notre parc est équipée de la technologie de sécurité la plus pointue : la <strong>Ligne de Vie Continue</strong> (LVC).
+                    Que vous soyez un jeune aventurier de 2 ans ou un grimpeur chevronné prêt à défier le vide, l'intégralité de notre parc est équipée de la technologie de sécurité la plus pointue : la <strong>Ligne de Vie Continue</strong> (LVC).
                 </p>
                 <div class="d-flex align-items-start mb-3">
                     <i class="fa-solid fa-lock fa-2x text-success me-3 mt-1"></i>
                     <div>
                         <h5 class="fw-bold mb-1">Un Crochet Inamovible</h5>
-                        <p class="text-muted">Dès le départ et jusqu'à l'arrivée de la tyrolienne finale, le mousqueton de sécurité ne peut <strong>mécaniquement pas</strong> être détaché du câble de sécurité.</p>
+                        <p class="text-muted">Dès le départ et jusqu'à l'arrivée de la tyrolienne finale, le crochet de sécurité ne peut <strong>mécaniquement pas</strong> être détaché du câble de sécurité.</p>
                     </div>
                 </div>
                 <div class="d-flex align-items-start mb-3">
@@ -60,7 +60,7 @@ get_header(); ?>
                     <span class="viking-badge viking-badge-lg">Dès 2-3 ans (90 cm)</span>
                 </div>
                 <i class="fa-solid fa-child-reaching fa-4x text-success mb-3 mt-2"></i>
-                <h3 class="fw-bold">Les Louveteaux</h3>
+                <h3 class="fw-bold">Le VillageViking</h3>
             </div>
             <div class="col-md-9 border-start ps-md-4 mt-3 mt-md-0">
                 <p class="fs-5 mb-3">Le royaume exclusif des plus petits ! Des parcours à faible hauteur créés pour découvrir l'équilibre en s'amusant. Les parents peuvent facilement suivre pas à pas et tenir la main de l'enfant depuis le sol (sans aucun équipement de leur côté).</p>

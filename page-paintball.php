@@ -40,7 +40,7 @@ get_header(); ?>
             <!-- Image d'illustration -->
             <div class="col-lg-5">
                 <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.15); transform: rotate(-3deg); border: 5px solid white;">
-                    <img src="https://images.unsplash.com/photo-1541018596637-29bdc96b7975?q=80&w=800" alt="Terrain de Paintball Forêt" class="img-fluid" style="width:100%; object-fit: cover; height: 380px;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/paintball-hero.png" alt="Action Paintball en Forêt" class="img-fluid" style="width:100%; object-fit: cover; height: 380px;">
                 </div>
             </div>
         </div>
