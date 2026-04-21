@@ -8,7 +8,7 @@
                     <div class="card-overlay">
                         <span class="badge-white">Nouveauté 2026</span>
                         <h1>L'aventure en famille, <br>grandeur nature.</h1>
-                        <p>Découvrez nos 12 parcours et plus de 130 ateliers au cœur de la forêt normande.</p>
+                        <p>Découvrez plus de <strong>130 ateliers</strong> au cœur de la forêt normande.</p>
                         <div class="hero-btns">
                             <a href="<?php echo home_url('/contact'); ?>" class="btn-reservation">NOUS CONTACTER</a>
                             <a href="#univers" class="btn-white-outline">VOIR LES PARCOURS</a>

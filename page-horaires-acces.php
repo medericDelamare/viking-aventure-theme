@@ -163,7 +163,7 @@ get_header();
                     <div class="p-4" style="background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                         <i class="fa-solid fa-clipboard-user fa-2x text-success mb-3"></i>
                         <h5>Briefing Sécurité</h5>
-                        <p class="text-muted small">Le matériel vous est fourni et notre équipe effectuera un briefing vidéo ou avec nos opérateurs et un parcours initiation à votre arrivée.</p>
+                        <p class="text-muted small">Le matériel vous est fourni et notre équipe effectuera un briefing avec nos opérateurs et un parcours initiation à votre arrivée.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">

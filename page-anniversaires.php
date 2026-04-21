@@ -122,6 +122,47 @@ get_header();
             </div>
         </div>
 
+        <!-- Documents à télécharger -->
+        <?php 
+        $pdf_resa = function_exists('get_field') ? get_field('formulaire_reservation') : false;
+        $pdf_invit = function_exists('get_field') ? get_field('cartons_invitation') : false;
+        
+        if ($pdf_resa || $pdf_invit) :
+        ?>
+        <div class="row justify-content-center mb-4 mt-2 g-4">
+            <div class="col-12 text-center mb-2">
+                <h3 class="fw-bold">Les documents utiles</h3>
+            </div>
+            
+            <?php if ($pdf_resa) : ?>
+            <div class="col-md-6 col-lg-5">
+                <div class="viking-cta-box d-flex flex-column align-items-center text-center p-4 h-100">
+                    <i class="fa-solid fa-file-pdf fa-3x text-danger opacity-75 mb-3"></i>
+                    <h5 class="fw-bold mb-2">Formulaire de réservation</h5>
+                    <p class="text-muted small mb-4">À remplir et à nous renvoyer pour valider l'anniversaire.</p>
+                    <a href="<?php echo esc_url($pdf_resa); ?>" target="_blank" class="btn btn-outline-danger mt-auto" style="border-radius: 12px; border-width: 2px; font-weight: bold;">
+                        <i class="fa-solid fa-download me-2"></i> Télécharger
+                    </a>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <?php if ($pdf_invit) : ?>
+            <div class="col-md-6 col-lg-5">
+                <div class="viking-cta-box d-flex flex-column align-items-center text-center p-4 h-100" style="border-left-color: var(--viking-primary) !important;">
+                    <i class="fa-solid fa-envelope-open-text fa-3x text-primary opacity-75 mb-3"></i>
+                    <h5 class="fw-bold mb-2">Cartons d'invitation</h5>
+                    <p class="text-muted small mb-4">À imprimer et à distribuer aux amis pour les inviter à l'aventure !</p>
+                    <a href="<?php echo esc_url($pdf_invit); ?>" target="_blank" class="btn btn-outline-primary mt-auto" style="border-radius: 12px; border-width: 2px; font-weight: bold;">
+                        <i class="fa-solid fa-print me-2"></i> Imprimer
+                    </a>
+                </div>
+            </div>
+            <?php endif; ?>
+        </div>
+        <hr class="my-5 opacity-25">
+        <?php endif; ?>
+
         <!-- Invitation finale -->
         <div class="row pt-5 pb-4 mt-4">
             <div class="col-12 text-center">

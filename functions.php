@@ -216,6 +216,7 @@ function viking_planning_meta_callback($post) {
     echo '<p class="description" style="margin-top:10px;">Dès que ce mois sera terminé, l\'image ne s\'affichera plus sur le site.</p>';
 }
 
+// Sauvegarde de la donnée
 function viking_save_planning_meta($post_id) {
     if (!isset($_POST['viking_planning_meta_nonce'])) return;
     if (!wp_verify_nonce($_POST['viking_planning_meta_nonce'], 'viking_save_planning_data')) return;
@@ -225,4 +226,135 @@ function viking_save_planning_meta($post_id) {
         update_post_meta($post_id, '_planning_month', sanitize_text_field($_POST['planning_month_field']));
     }
 }
-add_action('save_post', 'viking_save_planning_meta');
+add_action('save_post', 'viking_save_planning_meta');
+
+// --- ACF Fields for Pages (Paintball & Anniversaire) ---
+add_action('acf/init', 'viking_register_custom_acf');
+function viking_register_custom_acf() {
+    if( function_exists('acf_add_local_field_group') ):
+        
+        // Carousel Paintball
+        acf_add_local_field_group(array(
+            'key' => 'group_paintball_carousel',
+            'title' => 'Carousel de la page Paintball',
+            'fields' => array(
+                array(
+                    'key' => 'field_photo_carousel_1',
+                    'label' => 'Photo 1',
+                    'name' => 'photo_carousel_1',
+                    'type' => 'image',
+                    'return_format' => 'array',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                ),
+                array(
+                    'key' => 'field_photo_carousel_2',
+                    'label' => 'Photo 2',
+                    'name' => 'photo_carousel_2',
+                    'type' => 'image',
+                    'return_format' => 'array',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                ),
+                array(
+                    'key' => 'field_photo_carousel_3',
+                    'label' => 'Photo 3',
+                    'name' => 'photo_carousel_3',
+                    'type' => 'image',
+                    'return_format' => 'array',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                ),
+                array(
+                    'key' => 'field_photo_carousel_4',
+                    'label' => 'Photo 4',
+                    'name' => 'photo_carousel_4',
+                    'type' => 'image',
+                    'return_format' => 'array',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                ),
+                array(
+                    'key' => 'field_photo_carousel_5',
+                    'label' => 'Photo 5',
+                    'name' => 'photo_carousel_5',
+                    'type' => 'image',
+                    'return_format' => 'array',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'page-paintball.php',
+                    ),
+                ),
+                array(
+                    array(
+                        'param' => 'page',
+                        'operator' => '==',
+                        'value' => '28',
+                    ),
+                ),
+            ),
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+            'active' => true,
+            'description' => 'Ajoutez jusqu\'à 5 photos pour le carousel de la page Paintball',
+        ));
+
+        // PDF Anniversaires
+        acf_add_local_field_group(array(
+            'key' => 'group_anniversaire_docs',
+            'title' => 'Documents à télécharger (Anniversaire)',
+            'fields' => array(
+                array(
+                    'key' => 'field_formulaire_resa',
+                    'label' => 'Formulaire de réservation',
+                    'name' => 'formulaire_reservation',
+                    'type' => 'file',
+                    'return_format' => 'url',
+                    'instructions' => 'Uploadez le PDF du formulaire de réservation',
+                ),
+                array(
+                    'key' => 'field_cartons_invit',
+                    'label' => 'Cartons d\'invitation',
+                    'name' => 'cartons_invitation',
+                    'type' => 'file',
+                    'return_format' => 'url',
+                    'instructions' => 'Uploadez le PDF des cartons d\'invitation à imprimer',
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'page-anniversaires.php',
+                    ),
+                ),
+                array(
+                    array(
+                        'param' => 'page',
+                        'operator' => '==',
+                        'value' => '36',
+                    ),
+                ),
+            ),
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'active' => true,
+        ));
+        
+    endif;
+}

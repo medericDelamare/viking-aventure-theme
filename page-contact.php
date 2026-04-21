@@ -104,23 +104,7 @@ get_header();
 
         </div>
 
-         <!-- Encart Autorisation Parentale (Très visible) -->
-        <div class="row justify-content-center mb-5 mt-2">
-            <div class="col-lg-12">
-                <div class="viking-cta-box d-flex flex-column flex-md-row align-items-center p-4 p-md-5">
-                    <i class="fa-solid fa-file-signature fa-4x text-danger opacity-75 me-0 me-md-4 mb-4 mb-md-0"></i>
-                    <div class="text-center text-md-start mb-4 mb-md-0">
-                        <h3 class="fw-bold mb-2">Vous accompagnez des mineurs ?</h3>
-                        <p class="mb-0 text-dark fs-5">Une <strong>autorisation parentale</strong> remplie et signée est exigée pour tous les mineurs non-accompagnés par leur responsable légal sur nos parcours.</p>
-                    </div>
-                    <div class="ms-md-auto ps-md-4 text-center flex-shrink-0">
-                        <a href="/wp-content/uploads/autorisation-parentale-viking-aventure.pdf" target="_blank" class="btn btn-reservation fw-bold px-4 py-3 fs-5 shadow-sm" style="border-radius: 12px;">
-                            <i class="fa-solid fa-download me-2"></i> Télécharger le PDF
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 </main>
 

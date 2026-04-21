@@ -37,10 +37,56 @@ get_header(); ?>
                 </div>
             </div>
 
-            <!-- Image d'illustration -->
+            <!-- Image d'illustration ou Carousel -->
             <div class="col-lg-5">
                 <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.15); transform: rotate(-3deg); border: 5px solid white;">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/paintball-hero.png" alt="Action Paintball en Forêt" class="img-fluid" style="width:100%; object-fit: cover; height: 380px;">
+                    <?php 
+                    $carousel_images = array();
+                    if (function_exists('get_field')) {
+                        for ($i = 1; $i <= 5; $i++) {
+                            $img = get_field('photo_carousel_' . $i);
+                            if ($img) {
+                                $carousel_images[] = $img;
+                            }
+                        }
+                    }
+
+                    if (empty($carousel_images)) {
+                        // Image par défaut si aucune photo administrée
+                        echo '<img src="' . get_template_directory_uri() . '/assets/img/paintball-hero.png" alt="Action Paintball en Forêt" class="img-fluid" style="width:100%; object-fit: cover; height: 380px;">';
+                    } else {
+                        // Carousel
+                        ?>
+                        <div id="paintballCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                            <div class="carousel-indicators">
+                                <?php foreach ($carousel_images as $index => $img) : ?>
+                                    <button type="button" data-bs-target="#paintballCarousel" data-bs-slide-to="<?php echo $index; ?>" class="<?php echo $index === 0 ? 'active' : ''; ?>" aria-current="<?php echo $index === 0 ? 'true' : 'false'; ?>" aria-label="Slide <?php echo $index + 1; ?>"></button>
+                                <?php endforeach; ?>
+                            </div>
+                            <div class="carousel-inner">
+                                <?php foreach ($carousel_images as $index => $img) : 
+                                    $img_url = is_array($img) ? $img['url'] : $img;
+                                    $img_alt = is_array($img) && isset($img['alt']) && !empty($img['alt']) ? $img['alt'] : 'Action Paintball';
+                                ?>
+                                    <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+                                        <img src="<?php echo esc_url($img_url); ?>" class="d-block w-100" alt="<?php echo esc_attr($img_alt); ?>" style="object-fit: cover; height: 380px;">
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <?php if (count($carousel_images) > 1) : ?>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#paintballCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#paintballCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
+                            <?php endif; ?>
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -65,7 +111,7 @@ get_header(); ?>
             <div class="col-md-9 border-start ps-md-4 mt-3 mt-md-0">
                 <p class="fs-5 mb-3">Deux équipes s'affrontent sans pitié. Le but du jeu est très simple : éliminer l'intégralité de l'équipe adverse avant de vous faire toucher. Communication, couvertures mutuelles et tirs de barrage seront la clé de votre victoire !</p>
                 <div class="row text-muted small mt-4">
-                    <div class="col-sm-4"><i class="fa-solid fa-users text-primary me-2"></i> Mode Équipe 5v5 ou plus</div>
+                    <div class="col-sm-4"><i class="fa-solid fa-users text-primary me-2"></i> Mode Équipe 3vs3 ou plus</div>
                     <div class="col-sm-4"><i class="fa-solid fa-crosshairs text-primary me-2"></i> Viser la tête / le corps</div>
                     <div class="col-sm-4"><i class="fa-solid fa-skull text-primary me-2"></i> On sort du terrain touché</div>
                 </div>

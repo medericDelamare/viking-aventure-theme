@@ -98,7 +98,7 @@ get_header();
                     <div class="viking-icon-box">
                         <i class="fa-solid fa-burger fa-2x text-danger"></i>
                     </div>
-                    <h5 class="fw-bold">Le Coin Apéro</h5>
+                    <h5 class="fw-bold">Le coin restauration</h5>
                     <p class="text-muted small">Terrasses et zones de restauration (frites, snacks, sodas) pour Trinquer après avoir survécu.</p>
                 </div>
             </div>
