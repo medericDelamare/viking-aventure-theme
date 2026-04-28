@@ -21,8 +21,8 @@ get_header();
     // Configuration de la requête pour récupérer les FAQ
     $args = array(
         'post_type'      => 'faq',
-        'posts_per_page' => -1,      // -1 pour tout afficher
-        'orderby'        => 'date',  // Tu peux aussi mettre 'menu_order' si tu veux gérer l'ordre
+        'posts_per_page' => -1,
+        'orderby'        => 'date',
         'order'          => 'ASC',
     );
 

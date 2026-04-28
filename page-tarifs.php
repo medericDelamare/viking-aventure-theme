@@ -44,9 +44,9 @@ get_header();
                     <div class="price">15<span>€</span></div>
                     <p class="limit-info">Accès illimité</p>
                     <ul class="features">
-                        <li><i class="fa-solid fa-plus"></i> Parcours Enfants</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>+ Parcours 1 & 2</strong></li>
-                        <li><i class="fa-solid fa-leaf"></i> Niveau Facile</li>
+                        <li><i class="fa-solid fa-check"></i> Parcours Jaune</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Vert 1 & Vert 2</strong></li>
+                        <li><i class="fa-solid fa-leaf"></i> Idéal pour débuter</li>
                     </ul>
                 </div>
             </div>
@@ -64,7 +64,7 @@ get_header();
                     <p class="limit-info">Accès illimité</p>
                     <ul class="features">
                         <li><i class="fa-solid fa-plus"></i> Packs précédents</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>+ Parcours 3 & 4</strong></li>
+                        <li><i class="fa-solid fa-check"></i> <strong>+ Bleu 1 & Bleu 2</strong></li>
                         <li><i class="fa-solid fa-bolt"></i> Niveau Moyen</li>
                     </ul>
                 </div>
@@ -73,14 +73,14 @@ get_header();
             <div class="col-lg-3 col-md-6">
                 <div class="pricing-card h-100">
                     <div class="card-header-viking">
-                        <span class="viking-badge">Taille > 140cm</span>
+                        <span class="viking-badge">Taille > 150cm</span>
                         <h3>Formule difficile</h3>
                     </div>
                     <div class="price">25<span>€</span></div>
                     <p class="limit-info">Accès illimité</p>
                     <ul class="features">
                         <li><i class="fa-solid fa-plus"></i> Tous les parcours</li>
-                        <li><i class="fa-solid fa-skull-crossbones"></i> <strong>+ Parcours Noirs</strong></li>
+                        <li><i class="fa-solid fa-skull-crossbones"></i> <strong>+ Rouge & Noirs</strong></li>
                         <li><i class="fa-solid fa-mountain"></i> Adrénaline Max</li>
                     </ul>
                 </div>
@@ -96,12 +96,12 @@ get_header();
                         <div>
                             <span class="badge bg-success mb-2">Passionnés d'aventure</span>
                             <h3 class="fw-bold mb-2">Pass Illimité Annuel</h3>
-                            <p class="mb-0 text-white-50 fs-5">Accrobranche à volonté toute la saison.<br>Même pas besoin de réserver, venez quand vous voulez !</p>
+                            <p class="mb-0 text-white-50 fs-5">Accrobranche à volonté toute la saison pour la formule de votre choix.<br>Rentabilisé en seulement 3 visites !</p>
                         </div>
                     </div>
                     <div class="text-md-end text-center w-100 w-md-auto mt-3 mt-md-0">
-                        <div class="display-4 fw-bold text-white">75<span class="fs-3">€</span></div>
-                        <small class="text-white-50">Carte nominative / Par personne</small>
+                        <div class="display-4 fw-bold text-white">24<span class="fs-3">€</span> <small class="fs-5 opacity-50">à</small> 75<span class="fs-3">€</span></div>
+                        <small class="text-white-50">3x le prix de la formule / Carte nominative</small>
                     </div>
                 </div>
             </div>

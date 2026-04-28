@@ -33,9 +33,9 @@ get_header();
                     </div>
 
                     <ul class="features text-start mb-4">
-                        <li class="mb-3"><i class="fa-solid fa-clock text-danger me-2"></i> <strong>Mercredi, Samedi & Dimanche :</strong> 13h30 - 18h30</li>
-                        <li class="mb-3"><i class="fa-solid fa-calendar-day text-danger me-2"></i> <strong>Vacances Scolaires (Zone B) :</strong> Ouvert tous les jours (13h30 - 18h30)</li>
-                        <li class="mb-3"><i class="fa-solid fa-sun text-danger me-2"></i> <strong>Jours fériés :</strong> Ouvert selon horaires habituels</li>
+                        <li class="mb-3"><i class="fa-solid fa-calendar-check text-danger me-2"></i> <strong>Samedi, Dimanche & Fériés :</strong> 10h00 - 18h00</li>
+                        <li class="mb-3"><i class="fa-solid fa-umbrella-beach text-danger me-2"></i> <strong>Juillet & Août (WE & Fériés) :</strong> 10h00 - 19h00</li>
+                        <li class="mb-3"><i class="fa-solid fa-clock text-danger me-2"></i> <strong>Mercredi & Vacances (semaine) :</strong> 13h00 - 18h00</li>
                         <li class="mb-2"><i class="fa-solid fa-users text-danger me-2"></i> <strong>Groupes et Scolaires :</strong> Sur réservation tous les jours (matin inclus)</li>
                     </ul>
                     

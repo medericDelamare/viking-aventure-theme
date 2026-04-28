@@ -104,7 +104,7 @@ get_header();
                     </div>
                     <p class="text-muted">Nous proposons des <strong>tarifs préférentiels</strong> réservés exclusivement aux établissements scolaires et centres de loisirs (sur devis).</p>
                     <ul class="features text-start mt-4">
-                        <li class="mb-3"><i class="fa-solid fa-check-circle text-success me-2"></i> <strong>Gratuité totale</strong> pour les accompagnateurs encadrants (selon le ratio légal exigé).</li>
+                        <li class="mb-3"><i class="fa-solid fa-check-circle text-success me-2"></i> <strong>50% de réduction</strong> pour les accompagnateurs encadrants (selon le ratio légal exigé).</li>
                         <li class="mb-3"><i class="fa-solid fa-check-circle text-success me-2"></i> <strong>Sur réservation uniquement</strong> (matin ou après-midi).</li>
                         <li class="mb-2"><i class="fa-solid fa-file-invoice text-success me-2"></i> Tolérance selon le nombre final d'enfants le jour J pour la facturation.</li>
                     </ul>

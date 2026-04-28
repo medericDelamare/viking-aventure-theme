@@ -96,15 +96,15 @@ get_header(); ?>
             <div class="col-md-3 text-center border-end-md pe-md-4 border-secondary">
                 <div class="mb-3">
                     <!-- Badge Rouge Intense custom -->
-                    <span class="viking-badge viking-badge-danger">Taille > 1m40</span>
+                    <span class="viking-badge viking-badge-danger">Taille > 1m50</span>
                 </div>
                 <i class="fa-solid fa-bolt fa-4x text-warning mb-3 mt-2"></i>
                 <h3 class="fw-bold text-white">Le Frisson Viking</h3>
             </div>
             <div class="col-md-9 border-start border-secondary ps-md-4 mt-3 mt-md-0">
-                <p class="fs-5 mb-3 text-light">Strictement réservé aux cœurs les plus téméraires ! Affrontez nos parcours rouges et le mythique parcours noir. Du pur vertige qui demande de la force dans les bras, mais surtout de la volonté mentale. Sauts de Tarzan, rondins inversés et envolées incroyables à près de 15m de haut.</p>
+                <p class="fs-5 mb-3 text-light">Strictement réservé aux cœurs les plus téméraires ! Affrontez nos parcours rouges et le mythique parcours noir. Du pur vertige qui demande de la force dans les bras, mais surtout de la volonté mentale. Rondins inversés et envolées incroyables à près de 15m de haut.</p>
                 <div class="row text-white-50 small mt-4">
-                    <div class="col-sm-4"><i class="fa-solid fa-skull text-danger me-2"></i> <strong>Parcours extrême "Le Sanglier"</strong></div>
+                    <div class="col-sm-4"><i class="fa-solid fa-skull text-danger me-2"></i> <strong>Parcours extrême</strong></div>
                     <div class="col-sm-4"><i class="fa-solid fa-dumbbell text-danger me-2"></i> Épreuve physique intense</div>
                     <div class="col-sm-4"><i class="fa-solid fa-parachute-box text-danger me-2"></i> L'Adrénaline poussée au max</div>
                 </div>
