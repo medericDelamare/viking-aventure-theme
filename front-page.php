@@ -192,7 +192,7 @@
                         <div class="viking-legend">
                             <div class="legend-item">
                                 <span class="dot full"></span>
-                                <span class="label">10h - 18h</span>
+                                <span class="label" id="full-day-label">10h - 18h</span>
                             </div>
                             <div class="legend-item">
                                 <span class="dot half"></span>
@@ -203,6 +203,41 @@
                                 <span class="label">Fermé</span>
                             </div>
                         </div>
+                        
+                        <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const label = document.getElementById('full-day-label');
+                            if (!label) return;
+
+                            function updateLegendLabel() {
+                                const monthElement = document.querySelector('.wpsbc-month-name');
+                                if (!monthElement) return;
+
+                                const monthName = monthElement.textContent.toLowerCase();
+                                // Détection des mois d'été (Juillet / Août)
+                                const isSummer = monthName.includes('juillet') || monthName.includes('août') || 
+                                                 monthName.includes('july') || monthName.includes('august');
+                                
+                                if (isSummer) {
+                                    label.innerHTML = '10h - 19h <small style="font-weight:400; opacity:0.6;">(été)</small>';
+                                } else {
+                                    label.textContent = '10h - 18h';
+                                }
+                            }
+
+                            // Observer les changements du calendrier (navigation AJAX)
+                            const calendarEmbed = document.querySelector('.calendar-embed');
+                            if (calendarEmbed) {
+                                const observer = new MutationObserver(function(mutations) {
+                                    updateLegendLabel();
+                                });
+                                observer.observe(calendarEmbed, { childList: true, subtree: true });
+                            }
+
+                            // Premier check au chargement
+                            setTimeout(updateLegendLabel, 600);
+                        });
+                        </script>
                     </div>
 
                     <div class="info-card">
