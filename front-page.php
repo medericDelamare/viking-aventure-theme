@@ -190,55 +190,58 @@
                         </div>
 
                         <div class="viking-legend">
-                            <div class="legend-item">
-                                <span class="dot full"></span>
-                                <span class="label" id="full-day-label">10h - 18h</span>
-                            </div>
-                            <div class="legend-item">
-                                <span class="dot half"></span>
-                                <span class="label">13h - 18h</span>
-                            </div>
-                            <div class="legend-item">
-                                <span class="dot closed"></span>
-                                <span class="label">Fermé</span>
-                            </div>
-                        </div>
-                        
-                        <script>
-                        document.addEventListener("DOMContentLoaded", function() {
-                            const label = document.getElementById('full-day-label');
-                            if (!label) return;
+    <?php 
+    // On récupère le mois actuel (1 à 12)
+    $current_month = date('n'); 
+    // On définit si c'est l'été (Juillet = 7, Août = 8)
+    $is_summer = ($current_month == 7 || $current_month == 8);
+    ?>
 
-                            function updateLegendLabel() {
-                                const monthElement = document.querySelector('.wpsbc-month-name');
-                                if (!monthElement) return;
+    <div class="legend-item">
+        <span class="dot full"></span>
+        <span class="label" id="full-day-label">
+            <?php echo $is_summer ? '10h - 19h <small style="opacity:0.6">(été)</small>' : '10h - 18h'; ?>
+        </span>
+    </div>
+    <div class="legend-item">
+        <span class="dot half"></span>
+        <span class="label">13h - 18h</span>
+    </div>
+    <div class="legend-item">
+        <span class="dot closed"></span>
+        <span class="label">Fermé</span>
+    </div>
+</div>
+<script>
+(function() {
+    console.log("Viking Script : Surveillance active...");
 
-                                const monthName = monthElement.textContent.toLowerCase();
-                                // Détection des mois d'été (Juillet / Août)
-                                const isSummer = monthName.includes('juillet') || monthName.includes('août') || 
-                                                 monthName.includes('july') || monthName.includes('august');
-                                
-                                if (isSummer) {
-                                    label.innerHTML = '10h - 19h <small style="font-weight:400; opacity:0.6;">(été)</small>';
-                                } else {
-                                    label.textContent = '10h - 18h';
-                                }
-                            }
+    function forceUpdateViking() {
+        // 1. On cherche la première case du calendrier pour savoir quel mois est affiché
+        const firstDate = document.querySelector('.wpsbc-date[data-month]');
+        const label = document.getElementById('full-day-label');
 
-                            // Observer les changements du calendrier (navigation AJAX)
-                            const calendarEmbed = document.querySelector('.calendar-embed');
-                            if (calendarEmbed) {
-                                const observer = new MutationObserver(function(mutations) {
-                                    updateLegendLabel();
-                                });
-                                observer.observe(calendarEmbed, { childList: true, subtree: true });
-                            }
+        if (firstDate && label) {
+            // On récupère le numéro du mois (4 = avril, 7 = juillet, 8 = août)
+            const monthNumber = firstDate.getAttribute('data-month');
+            
+            // SI mois = 7 (Juillet) OU mois = 8 (Août)
+            if (monthNumber === "7" || monthNumber === "8") {
+                if (!label.innerHTML.includes('19h')) {
+                    label.innerHTML = "10h - 19h <small style='opacity:0.7'>(été)</small>";
+                }
+            } else {
+                if (label.innerHTML.includes('19h')) {
+                    label.innerHTML = "10h - 18h";
+                }
+            }
+        }
+    }
 
-                            // Premier check au chargement
-                            setTimeout(updateLegendLabel, 600);
-                        });
-                        </script>
-                    </div>
+    // On vérifie toutes les 400ms
+    setInterval(forceUpdateViking, 400);
+})();
+</script>            </div>
 
                     <div class="info-card">
                         <h3>Infos Pratiques</h3>
