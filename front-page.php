@@ -218,7 +218,6 @@
 </div>
 <script>
 (function() {
-    console.log("Viking Script : Surveillance active...");
 
     function forceUpdateViking() {
         // 1. On cherche la première case du calendrier pour savoir quel mois est affiché

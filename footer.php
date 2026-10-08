@@ -103,12 +103,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const m = today.getMonth() + 1; // JS commence à 0
     const y = today.getFullYear();
 
-    console.log(d);
 
     // On cherche la case qui correspond à la date système
     const todayCell = document.querySelector(`.wpsbc-date[data-day="${d}"][data-month="${m}"][data-year="${y}"]`);
 
-    console.log(todayCell)
 
     if (todayCell) {
         todayCell.style.outline = "3px solid #bf222d";
