@@ -4,7 +4,13 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <?php if (is_front_page()) : ?>
+    <link rel="preload" as="image" href="<?php echo get_template_directory_uri(); ?>/assets/img/home.webp" fetchpriority="high">
+    <?php endif; ?>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -50,7 +56,7 @@
 
             <div class="logo-wrapper">
                 <a href="<?php echo home_url(); ?>" class="logo-link">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Viking Aventure">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.webp" alt="Viking Aventure" width="240" height="240">
                 </a>
             </div>
 

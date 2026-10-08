@@ -42,7 +42,7 @@ get_header();
                     <!-- Frites Mercier -->
                     <div class="col-md-3 col-6">
                         <div class="p-4 h-100 viking-card-light border-partner-mercier">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/frites-mercier.jpg" alt="Frites Mercier Logo" class="viking-partner-logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/frites-mercier.webp" alt="Frites Mercier Logo" class="viking-partner-logo" loading="lazy">
                             <h5 class="fw-bold fs-6 mb-1"><a href="https://www.frites-mercier.fr/" target="_blank" class="text-dark text-decoration-none">Frites Mercier</a></h5>
                             <p class="small text-muted mb-0">À 2km</p>
                         </div>
@@ -51,7 +51,7 @@ get_header();
                     <!-- Brasserie Ragnar -->
                     <div class="col-md-3 col-6">
                         <div class="p-4 h-100 viking-card-light border-partner-ragnar">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ragnar.png" alt="Brasserie Ragnar Logo" class="viking-partner-logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ragnar.png" alt="Brasserie Ragnar Logo" class="viking-partner-logo" loading="lazy">
                             <h5 class="fw-bold fs-6 mb-1"><a href="https://www.brasserieragnar.com/" target="_blank" class="text-dark text-decoration-none">Bière Ragnar en pression</a></h5>
                             <p class="small text-muted mb-0">À 50km - Fièrement viking !</p>
                         </div>
@@ -60,7 +60,7 @@ get_header();
                     <!-- Ferme du Bois Louvet -->
                     <div class="col-md-3 col-6">
                         <div class="p-4 h-100 viking-card-light border-partner-louvet">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/glaces-bois-louvet.png" alt="Glace Bois Louvet Logo" class="viking-partner-logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/glaces-bois-louvet.png" alt="Glace Bois Louvet Logo" class="viking-partner-logo" loading="lazy">
                             <h5 class="fw-bold fs-6 mb-1"><a href="https://www.glaceduboislouvet.fr/" target="_blank" class="text-dark text-decoration-none">Ferme du Bois Louvet</a></h5>
                             <p class="small text-muted mb-0">À Lieurey</p>
                         </div>
@@ -69,7 +69,7 @@ get_header();
                     <!-- Poule aux oeufs d'Eure -->
                     <div class="col-md-3 col-6">
                         <div class="p-4 h-100 viking-card-light border-partner-poule">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/poule%20aux%20oeufs%20eure.jpg" alt="Poule aux Oeufs d'Eure" class="viking-partner-logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/poule%20aux%20oeufs%20eure.jpg" alt="Poule aux Oeufs d'Eure" class="viking-partner-logo" loading="lazy">
                             <h5 class="fw-bold fs-6 mb-1"><a href="https://www.facebook.com/p/La-poule-aux-oeufs-dEure-100070690185774/" target="_blank" class="text-dark text-decoration-none">La Poule aux Œufs d'Eure</a></h5>
                             <p class="small text-muted mb-0">À seulement 2km</p>
                         </div>

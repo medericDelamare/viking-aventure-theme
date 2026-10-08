@@ -115,7 +115,7 @@ get_header();
                             if (!$img_url) continue;
                             ?>
                             <div class="planning-slide">
-                                <img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" class="planning-img">
+                                <img src="<?php echo esc_url($img_url); ?>" alt="<?php the_title_attribute(); ?>" class="planning-img" loading="lazy">
                                 <div class="planning-title"><?php the_title(); ?></div>
                             </div>
                         <?php endwhile;

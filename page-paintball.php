@@ -53,7 +53,7 @@ get_header(); ?>
 
                     if (empty($carousel_images)) {
                         // Image par défaut si aucune photo administrée
-                        echo '<img src="' . get_template_directory_uri() . '/assets/img/paintball-hero.png" alt="Action Paintball en Forêt" class="img-fluid" style="width:100%; object-fit: cover; height: 380px;">';
+                        echo '<img src="' . get_template_directory_uri() . '/assets/img/paintball-hero.webp" alt="Action Paintball en Forêt" class="img-fluid" style="width:100%; object-fit: cover; height: 380px;">';
                     } else {
                         // Carousel
                         ?>

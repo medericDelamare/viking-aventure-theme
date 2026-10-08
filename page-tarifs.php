@@ -52,7 +52,8 @@ get_header();
             </div>
 
             <div class="col-lg-3 col-md-6 position-relative">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mascotte-tarifs.png"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mascotte-tarifs.webp"
+                     loading="lazy"
                      class="mascot-overlap"
                      alt="Mascotte Viking">
                 <div class="pricing-card featured h-100">

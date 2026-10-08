@@ -10,22 +10,16 @@ add_action( 'after_setup_theme', 'viking_aventure_setup' );
 
 function viking_aventure_enqueue_styles() {
     $uri = get_template_directory_uri();
-    $v = time();
+    $dir = get_template_directory();
 
-    wp_enqueue_style('viking-variables', $uri . '/css/variables.css', array(), $v);
-    wp_enqueue_style('viking-components', $uri . '/css/components.css', array(), $v);
-    wp_enqueue_style('viking-header', $uri . '/css/header.css', array(), $v);
-    wp_enqueue_style('viking-contact', $uri . '/css/contact.css', array(), $v);
-    wp_enqueue_style('viking-hero', $uri . '/css/hero.css', array(), $v);
-    wp_enqueue_style('viking-layout', $uri . '/css/layout.css', array(), $v);
-    wp_enqueue_style('viking-faq', $uri . '/css/faq.css', array(), $v);
-    wp_enqueue_style('viking-tarifs', $uri . '/css/tarifs.css', array(), $v);
-    wp_enqueue_style('viking-accrobranche', $uri . '/css/accrobranche.css', array(), $v);
-    wp_enqueue_style('viking-rgpd', $uri . '/css/rgpd.css', array(), $v);
-    wp_enqueue_style('viking-actus', $uri . '/css/actus.css', array(), $v);
-    wp_enqueue_style('viking-main', get_stylesheet_uri(), array(), $v);
+    // Version = date de modification du fichier : le navigateur le garde en cache tant qu'il ne change pas
+    $styles = array('variables', 'components', 'header', 'contact', 'hero', 'layout', 'faq', 'tarifs', 'accrobranche', 'rgpd', 'actus');
+    foreach ($styles as $name) {
+        wp_enqueue_style('viking-' . $name, $uri . '/css/' . $name . '.css', array(), filemtime($dir . '/css/' . $name . '.css'));
+    }
+    wp_enqueue_style('viking-main', get_stylesheet_uri(), array(), filemtime($dir . '/style.css'));
 
-    wp_enqueue_script('viking-rgpd-js', $uri . '/js/rgpd.js', array(), $v, true);
+    wp_enqueue_script('viking-rgpd-js', $uri . '/js/rgpd.js', array(), filemtime($dir . '/js/rgpd.js'), true);
 }
 add_action('wp_enqueue_scripts', 'viking_aventure_enqueue_styles');
 
