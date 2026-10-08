@@ -28,8 +28,8 @@ get_header();
                     </div>
                     
                     <div class="viking-alert-dark mb-4 text-center">
-                        <i class="fa-solid fa-calendar-check me-2"></i>
-                        Ouverture de la saison <strong>d'Avril à Novembre</strong>
+                        <i class="fa-solid fa-calendar-xmark me-2"></i>
+                        La saison 2026 est terminée. Réouverture le <strong>27 mars 2027</strong>
                     </div>
 
                     <ul class="features text-start mb-4">
