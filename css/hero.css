@@ -31,6 +31,13 @@
     text-align: center;
 }
 
+/* En desktop le logo rond dépasse du header jusqu'à 165px : on descend le bandeau dessous */
+@media (min-width: 992px) {
+    .season-banner {
+        margin-top: 55px;
+    }
+}
+
 .hero-main-card {
     position: relative;
     height: 600px;
