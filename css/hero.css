@@ -17,6 +17,20 @@
     padding-bottom: 50px;
 }
 
+.season-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background: var(--viking-red);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
 .hero-main-card {
     position: relative;
     height: 600px;

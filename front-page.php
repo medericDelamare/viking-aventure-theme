@@ -4,6 +4,10 @@
 
         <section class="hero-card-section">
             <div class="container">
+                <div class="season-banner">
+                    <i class="fa-solid fa-calendar-xmark"></i>
+                    <span>La saison 2026 est terminée. Réouverture le <strong>27 mars 2027</strong></span>
+                </div>
                 <div class="hero-main-card">
                     <div class="card-overlay">
                         <span class="badge-white">Nouveauté 2026</span>
